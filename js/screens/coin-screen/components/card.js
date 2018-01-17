@@ -25,6 +25,12 @@ export const cryptoImages = {
     'https://res.cloudinary.com/da7jhtpgh/image/upload/v1508609486/monero_wzk3ur.png',
   NEO:
     'https://res.cloudinary.com/da7jhtpgh/image/upload/v1508609486/neo_fvoo6c.png',
+  ADA:
+   'https://coincodex.com/en/resources/images/admin/coins/cardano.png:resizebox?60x60',
+  MIOTA:
+   'https://coincodex.com/en/resources/images/admin/coins/iota.png:resizebox?60x60',
+   XLM:
+   'https://coincodex.com/en/resources/images/admin/coins/stellar.png:resizebox?60x60'
 };
 
 const {
@@ -35,10 +41,10 @@ const {
   coinSymbol,
   coinName,
   coinPrice,
-  statisticsContainer,
   seperator,
   percentChangePlus,
   percentChangeMinus,
+  lineRow,
 } = style;
 
 class CoinCard extends React.Component {
@@ -60,33 +66,20 @@ class CoinCard extends React.Component {
           <Text style={coinPrice}>
             {price_usd}
             <Text style={moneySymbol}> $ </Text>
-          </Text>
-        </View>
-
-        <View style={statisticsContainer}>
-          <Text>
-            24h:
-            <Text
-              style={
-                percent_change_24h < 0 ? percentChangeMinus : percentChangePlus
-              }
-            >
-              {' '}
-              {percent_change_24h} %{' '}
-            </Text>
-          </Text>
-          <Text>
-            7d:
-            <Text
-              style={
-                percent_change_7d < 0 ? percentChangeMinus : percentChangePlus
-              }
-            >
-              {' '}
-              {percent_change_7d} %{' '}
+            <Text>
+              24h:
+              <Text
+                style={
+                  percent_change_24h < 0 ? percentChangeMinus : percentChangePlus
+                }
+              >
+                {' '}
+                {percent_change_24h} %{' '}
+              </Text>
             </Text>
           </Text>
         </View>
+        <View style={lineRow} />
       </View>
     );
   }

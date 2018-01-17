@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, View, Text } from 'react-native';
 import PropTypes from 'prop-types';
 import style from './style.js';
 
@@ -22,9 +22,14 @@ class Coins extends React.Component {
 
   render() {
     return (
-      <ScrollView style={{ marginTop:40}} contentInset={{top:40, bottom:40, left:0, right:0}} contentContainerStyle={style.container}>
-        {this.renderCoinCards()}
-      </ScrollView>
+      <View style={style.container}>
+        <View style={style.coinText}>
+          <Text> COIN PRICES </Text>
+        </View>
+        <ScrollView contentContainerStyle={style.coinsContainer}>
+          {this.renderCoinCards()}
+        </ScrollView>
+      </View>
     );
   }
 }

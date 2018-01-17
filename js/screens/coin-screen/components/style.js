@@ -41,6 +41,11 @@ export default StyleSheet.create({
   upperRow: {
     display: 'flex',
     flexDirection: 'row',
+  },
+  lineRow: {
+    borderBottomColor: 'black',
+    borderBottomWidth: 1,
+    marginTop: 15,
     marginBottom: 15,
   },
   coinSymbol: {
@@ -69,14 +74,7 @@ export default StyleSheet.create({
   },
   moneySymbol: {
     fontWeight: 'bold',
-  },
-  statisticsContainer: {
-    display: 'flex',
-    borderTopColor: '#FAFAFA',
-    borderTopWidth: 2,
-    padding: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
+    marginRight: 5,
   },
   percentChangePlus: {
     color: '#00BFA5',
