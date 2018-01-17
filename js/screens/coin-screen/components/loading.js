@@ -9,7 +9,7 @@ import style from './style';
 export default class LoadingScreen extends React.Component {
   render() {
     return (
-      <View style={style.container}>
+      <View style={style.loadingContainer}>
         <ActivityIndicator
           style={[style.indicator, { height: 80 }]}
           size="large"
