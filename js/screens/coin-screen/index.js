@@ -37,7 +37,6 @@ class CoinScreenContainer extends React.Component {
 
   render() {
     const { loading, coins } = this.state;
-    console.log('coins');
     if (loading) {
       return <LoadingScreen />;
     }
